@@ -72,3 +72,24 @@ footer {
         }
     }
 }
+.bg-black{
+  background-color: black;
+}
+.my-card{
+    width: 200px;
+    .img-box {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      cursor: pointer;
+      img{
+          object-fit: contain;
+          width: 100%
+      }
+    }
+    h5{
+          color: white;
+          font-size: 1.2em;
+          font-weight: 700
+      }
+  }
