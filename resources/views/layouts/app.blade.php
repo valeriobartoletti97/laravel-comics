@@ -19,8 +19,10 @@
     
     @include('partials/header')
 
-    @yield('content')
-
+    <main>
+        @yield('jumbo')
+    </main>
+    
     @include('partials/footer')
 
 </body>

@@ -2,10 +2,10 @@
 
 @section('title', 'Db Comics')
 
-@section('content')
+@section('jumbo')
 
-<main>
-    <h1>Home page</h1>
-</main>
+<div class="jumbo-main">
+    
+</div>
 
 @endsection

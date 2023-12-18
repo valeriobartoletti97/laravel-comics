@@ -45,3 +45,30 @@ header {
         }
     }
 }
+.jumbo-main {
+    height: 450px;
+    overflow: hidden;
+    background-image: url("/images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+footer {
+    background-color: $secondary-color;
+    button {
+        background-color: $secondary-color;
+        border: 2px solid $primary-color;
+    }
+    h4 {
+        font-size: 1.4em;
+        color: $primary-color;
+        font-weight: 800;
+        margin: 0 !important;
+    }
+    div {
+        img {
+            width: 30px;
+            display: block;
+        }
+    }
+}
