@@ -33,11 +33,12 @@ Route::get('/comics/{id}', function ($id) {
         if ($item['id'] == $id) {
             $comic = $item;
         }
+    }
         if ($comic) {
             return view('/comics.show', compact('comic', 'linksComics', 'linksDc', 'linksSites', 'linksShop'));
         } else {
             abort(404);
         }
-    }
+    
 }
 )->name('comics.show');

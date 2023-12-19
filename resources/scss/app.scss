@@ -18,6 +18,47 @@ $fa-font-path: "../webfonts" !default;
 body {
     font-size: 0.8em;
 }
+.my-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    h2{
+    font-weight: 800;
+    }
+    .comic-img{
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+        overflow:hidden;
+        top:-330px;
+        left:10px;
+        border: 1px solid white;
+        img{
+            width: 100%;
+            height:100%
+        }
+    }
+    .comic-price{
+        background-color:green;
+        max-width:600px;
+        padding: 5px 10px;
+        font-size: 1.3em;
+        color: rgb(92, 185, 92);
+        border-radius: 5px;
+        span{
+            color:white
+        }
+    }
+    .comic-description{
+        font-size: 1.2em;
+        font-weight: 600;
+        color: grey;
+    }
+    .comic-type, .comic-date{
+        font-weight: 600;
+    }
+}
+
 a {
     text-decoration: none;
     &:hover {
@@ -126,4 +167,10 @@ footer {
  }
  .link-color{
     color:gray;
+ }
+
+ .bg-primary{
+    background-color: $primary-color;
+    height: 100px;
+    width:100%
  }
