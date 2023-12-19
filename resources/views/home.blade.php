@@ -92,13 +92,41 @@
             <div class="col-6 d-flex">
                 <div class="pe-4 d-flex flex-column">
                     <h3 class="text-uppercase pt-5 pb-3">Dc comics</h3>
-                    <h3 class="text-uppercase pt-2 pb-3">Shop</h3>                   
+                    <ul>
+                        @foreach ($linksComics as $link)
+                        <li class="d-flex flex-column">
+                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                    <h3 class="text-uppercase pt-2 pb-3">Shop</h3> 
+                    <ul>
+                        @foreach ($linksShop as $link)
+                        <li class="d-flex flex-column">
+                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                        </li>
+                        @endforeach
+                    </ul>                          
                 </div>
                 <div class="pe-4 d-flex flex-column">
-                    <h3 class="text-uppercase pt-5 pb-3">Dc</h3>                    
+                    <h3 class="text-uppercase pt-5 pb-3">Dc</h3>
+                    <ul>
+                        @foreach ($linksDc as $link)
+                        <li class="d-flex flex-column">
+                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                        </li>
+                        @endforeach
+                    </ul>                    
                 </div>
                 <div class="d-flex flex-column">
                     <h3 class="text-uppercase pt-5 pb-3">Sites</h3>
+                    <ul>
+                        @foreach ($linksSites as $link)
+                        <li class="d-flex flex-column">
+                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
+                        </li>
+                        @endforeach
+                    </ul>        
                 </div>
             </div>
             <div class="col-6">
