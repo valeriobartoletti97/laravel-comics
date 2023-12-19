@@ -11,7 +11,9 @@
             <div class="col-2 d-flex flex-wrap px-2 mt-4">
                 <div class="my-card">
                     <div class="img-box">
-                        <a href="{{route('comics.show', $comic['id'])}}"><img src="{{$comic['thumb']}}" alt="{{$comic['title']}}"></a>
+                        <a href="{{route('comics.show', $comic['id'])}}">
+                            <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+                        </a>
                     </div>
                     <h5 class="text-uppercase pt-3">
                         {{$comic['title']}}
