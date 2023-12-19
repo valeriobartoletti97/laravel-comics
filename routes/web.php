@@ -21,3 +21,30 @@ Route::get('/', function () {
     $linksShop = config('db.linksShop');
     return view('home', compact('comics','linksComics','linksDc','linksSites','linksShop'));
 });
+
+Route::get('/comics/{id}', function ($id) {
+    $comics = config('db.comics');
+    $comics = config('db.comics');
+    $linksComics = config('db.linksComics');
+    $linksDc = config('db.linksDc');
+    $linksSites = config('db.linksSites');
+    $linksShop = config('db.linksShop');
+    if($id >= 0 && $id < count($comics)){
+        $comic = $comics[$id];
+        return view('/comics.show', compact('comic','linksComics','linksDc','linksSites','linksShop'));
+    } else{
+        abort(404);
+    }
+    /* $comic = null;
+    foreach ($comics as $item) {
+        if ($item['id'] == $id){
+            $comic = $item;
+        }
+        }
+        if($comic){
+            return view('/comics.show', compact('comic'));
+        } else{
+            abort(404);
+        } */
+    }
+);

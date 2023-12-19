@@ -2,14 +2,6 @@
 
 @section('title', 'Db Comics')
 
-@section('jumbo')
-
-<div class="jumbo-main">
-    
-</div>
-
-@endsection
-
 @section('content')
 
 <div class="bg-black">
@@ -19,7 +11,7 @@
             <div class="col-2 d-flex flex-wrap px-2 mt-4">
                 <div class="my-card">
                     <div class="img-box">
-                        <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+                        <a href="{{route('comics.show', $comic['id'])}}"><img src="{{$comic['thumb']}}" alt="{{$comic['title']}}"></a>
                     </div>
                     <h5 class="text-uppercase pt-3">
                         {{$comic['title']}}
@@ -79,60 +71,6 @@
                 </div>
             </li>
         </ul>
-    </div>
-</div>
-
-@endsection
-
-@section('more')
-
-<div class="more-main">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-6 d-flex">
-                <div class="pe-4 d-flex flex-column">
-                    <h3 class="text-uppercase pt-5 pb-3">Dc comics</h3>
-                    <ul>
-                        @foreach ($linksComics as $link)
-                        <li class="d-flex flex-column">
-                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
-                        </li>
-                        @endforeach
-                    </ul>
-                    <h3 class="text-uppercase pt-2 pb-3">Shop</h3> 
-                    <ul>
-                        @foreach ($linksShop as $link)
-                        <li class="d-flex flex-column">
-                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
-                        </li>
-                        @endforeach
-                    </ul>                          
-                </div>
-                <div class="pe-4 d-flex flex-column">
-                    <h3 class="text-uppercase pt-5 pb-3">Dc</h3>
-                    <ul>
-                        @foreach ($linksDc as $link)
-                        <li class="d-flex flex-column">
-                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
-                        </li>
-                        @endforeach
-                    </ul>                    
-                </div>
-                <div class="d-flex flex-column">
-                    <h3 class="text-uppercase pt-5 pb-3">Sites</h3>
-                    <ul>
-                        @foreach ($linksSites as $link)
-                        <li class="d-flex flex-column">
-                            <a class="pt-1 link-color" href="{{$link['href']}}">{{ $link['title'] }}</a>
-                        </li>
-                        @endforeach
-                    </ul>        
-                </div>
-            </div>
-            <div class="col-6">
-                <img class="bg-logo" src="/images/dc-logo-bg.png" alt="dc logo">
-            </div>
-        </div>
     </div>
 </div>
 

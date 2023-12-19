@@ -71,6 +71,11 @@ footer {
             display: block;
         }
     }
+    li{
+        a:hover{
+            color: white
+        }
+    }
 }
 .bg-black {
     background-color: black;
